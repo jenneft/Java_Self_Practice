@@ -1,4 +1,7 @@
-package java_day11;
+package java_day11.restaurant;
+
+import java_day11.restaurant.Chef;
+import java_day11.restaurant.Server;
 
 import java.util.ArrayList;
 import java.util.Arrays;

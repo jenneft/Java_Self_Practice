@@ -1,4 +1,4 @@
-package java_day11;
+package java_day11.restaurant;
 
 public class Server {
     String name;

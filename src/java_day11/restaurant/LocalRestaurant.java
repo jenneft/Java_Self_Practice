@@ -1,6 +1,4 @@
-package java_day11;
-
-import java.util.ArrayList;
+package java_day11.restaurant;
 
 public class LocalRestaurant {
     public static void main(String[] args) {
