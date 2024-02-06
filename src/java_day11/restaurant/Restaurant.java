@@ -38,56 +38,40 @@ public class Restaurant {
         }
 
     public void removeDuplicates() {
+        boolean[] encounteredEmployeeIDs = new boolean[1000]; // Assuming employee IDs range
+
         for (int i = Chefs.size() - 1; i >= 0; i--) {
-            Chef chef1 = Chefs.get(i);
-            int currentEmployeeID = chef1.getEmployeeID();
-            boolean duplicateFound = false;
-            for (int j = i - 1; j >= 0; j--) {
-                Chef chef2 = Chefs.get(j);
-                if (chef2.getEmployeeID() == currentEmployeeID) {
-                    Chefs.remove(i); // Removes duplicate chef
-                    duplicateFound = true;
-                    break;
-                }
-            }
-            if (!duplicateFound) {
-                for (int k = Chefs.size() - 1; k > i; k--) {
-                    if (Chefs.get(k).getEmployeeID() == currentEmployeeID) {
-                        Chefs.remove(k);
-                        break;
-                    }
-                }
+            Chef chef = Chefs.get(i);
+            int currentEmployeeID = chef.getEmployeeID();
+
+            if (encounteredEmployeeIDs[currentEmployeeID]) {
+                Chefs.remove(i); // Removes duplicate chef
+            } else {
+                encounteredEmployeeIDs[currentEmployeeID] = true;
             }
         }
     }
+
     public void terminateChef(int employeeID) {
         Chefs.removeIf(chef -> chef.getEmployeeID() == employeeID);
     }
 
 
     public void removeDuplicateServers() {
+        boolean[] encounteredEmployeeIDs = new boolean[1000]; // Assuming employee IDs range
+
         for (int i = Servers.size() - 1; i >= 0; i--) {
-            Server server1 = Servers.get(i);
-            int currentEmployeeID = server1.getEmployeeID();
-            boolean duplicateFound = false;
-            for (int j = i - 1; j >= 0; j--) {
-                Server server2 = Servers.get(j);
-                if (server2.getEmployeeID() == currentEmployeeID) {
-                    Servers.remove(i); // Removes duplicate server
-                    duplicateFound = true;
-                    break;
-                }
-            }
-            if (!duplicateFound) {
-                for (int k = Servers.size() - 1; k > i; k--) {
-                    if (Servers.get(k).getEmployeeID() == currentEmployeeID) {
-                        Servers.remove(k);
-                        break;
-                    }
-                }
+            Server server = Servers.get(i);
+            int currentEmployeeID = server.getEmployeeID();
+
+            if (encounteredEmployeeIDs[currentEmployeeID]) {
+                Servers.remove(i); // Removes duplicate server
+            } else {
+                encounteredEmployeeIDs[currentEmployeeID] = true;
             }
         }
     }
+
     public void terminateServer(int employeeID){
         Servers.removeIf(server -> server.getEmployeeID()==employeeID);
     }
