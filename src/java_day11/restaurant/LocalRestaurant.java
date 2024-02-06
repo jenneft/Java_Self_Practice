@@ -5,18 +5,34 @@ public class LocalRestaurant {
 
         Restaurant restaurant = new Restaurant("Joe Ferraro", "Rome,Italy", 5, 379);
 
-        Server[] servers={
-                new Server("Aurora",711,35,true),
-                new Server("Giovanni",712,17,false),
-                new Server("Elana",713,34,true)
+        Server[] servers = {
+                new Server("Peach", 711, 34, true),
+                new Server("Peach", 711, 34, true),
+                new Server("Yoshi", 712, 35, true),
+                new Server("Yoshi", 712, 35, true),
+                new Server("Bowser", 713, 17, false),
+
         };
-        Chef[] chefs={
-                new Chef("Mario",714,55,true),
-                new Chef("Luigi",715,52,false)
+        Chef[] chefs = {
+                new Chef("Mario", 714, 55, true),//testing if it removes the chef with the matching ID from the Chefs ArrayList
+                new Chef("Mario", 714, 55, true),
+                new Chef("Luigi", 715, 52, false),
+                new Chef("Luigi", 715, 52, false),
+                new Chef("Toad", 716, 55, true),
         };
-        restaurant.hireServer(servers);
+
         restaurant.hireChef(chefs);
+        restaurant.removeDuplicates();
+        restaurant.terminateChef(716);
+
+
+        restaurant.hireServer(servers);
+        restaurant.removeDuplicateServers();
+        restaurant.terminateServer(713);
+
+
         System.out.println(restaurant);
+
     }
 }
 /*

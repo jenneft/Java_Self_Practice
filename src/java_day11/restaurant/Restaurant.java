@@ -32,14 +32,61 @@ public class Restaurant {
         public void hireChef(Chef chef){
         Chefs.add(chef);
         }
+
         public void hireChef(Chef[] chefs){
-            for (Chef chef : chefs) {
-                this.Chefs.add(chef);
-            }
+            this.Chefs.addAll(Arrays.asList(chefs));
         }
 
-    public void terminateChef(int employeeID){
+    public void removeDuplicates() {
+        for (int i = Chefs.size() - 1; i >= 0; i--) {
+            Chef chef1 = Chefs.get(i);
+            int currentEmployeeID = chef1.getEmployeeID();
+            boolean duplicateFound = false;
+            for (int j = i - 1; j >= 0; j--) {
+                Chef chef2 = Chefs.get(j);
+                if (chef2.getEmployeeID() == currentEmployeeID) {
+                    Chefs.remove(i); // Removes duplicate chef
+                    duplicateFound = true;
+                    break;
+                }
+            }
+            if (!duplicateFound) {
+                for (int k = Chefs.size() - 1; k > i; k--) {
+                    if (Chefs.get(k).getEmployeeID() == currentEmployeeID) {
+                        Chefs.remove(k);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    public void terminateChef(int employeeID) {
         Chefs.removeIf(chef -> chef.getEmployeeID() == employeeID);
+    }
+
+
+    public void removeDuplicateServers() {
+        for (int i = Servers.size() - 1; i >= 0; i--) {
+            Server server1 = Servers.get(i);
+            int currentEmployeeID = server1.getEmployeeID();
+            boolean duplicateFound = false;
+            for (int j = i - 1; j >= 0; j--) {
+                Server server2 = Servers.get(j);
+                if (server2.getEmployeeID() == currentEmployeeID) {
+                    Servers.remove(i); // Removes duplicate server
+                    duplicateFound = true;
+                    break;
+                }
+            }
+            if (!duplicateFound) {
+                for (int k = Servers.size() - 1; k > i; k--) {
+                    if (Servers.get(k).getEmployeeID() == currentEmployeeID) {
+                        Servers.remove(k);
+                        break;
+                    }
+                }
+            }
+        }
     }
     public void terminateServer(int employeeID){
         Servers.removeIf(server -> server.getEmployeeID()==employeeID);
@@ -47,13 +94,13 @@ public class Restaurant {
 
 
     public String toString() {
-        return getClass().getSimpleName()+"{" +
+        return getClass().getSimpleName()+": {" +
                 "Owner='" + Owner + '\'' +
                 ", Location='" + Location + '\'' +
                 ", numberOfStars=" + numberOfStars +
-                ", employeeID=" + employeeID +
-                ", Servers=" + Servers +
-                ", Chefs=" + Chefs +
+                ", employeeID=" + employeeID +"\n->"+
+                " Servers=" + Servers +"\n->"+
+                " Chefs=" + Chefs +
                 '}';
     }
 
@@ -81,3 +128,31 @@ Create a custom class named Restaurant with the following specifications:
 		toString(): returns a string representation of the Restaurant object, including the number of Servers and Chefs alongside other information
 
  */
+
+
+/*    OPTION TO REMOVE THE DUPLICATES:
+
+public void terminateChef(int employeeID) {
+        for (int i = Chefs.size() - 1; i >= 0; i--) {
+            Chef chef = Chefs.get(i);
+            if (chef.getEmployeeID() == employeeID) {
+                Chefs.remove(i); // Removes the last occurrence
+                break;
+            }
+        }
+    }
+
+
+   ANOTHER OPTION TO TERMINATE A DUPLICATE:
+
+       public void terminateChef(int employeeID) {
+
+        for (Chef chef : Chefs) {
+            if (chef.getEmployeeID() == employeeID) {
+                Chefs.remove(chef);
+                break; // Removes the first occurrence
+            }
+        }
+    }
+
+    */

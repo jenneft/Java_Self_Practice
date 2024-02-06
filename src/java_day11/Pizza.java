@@ -26,7 +26,7 @@ public class Pizza {
     }
 
     public String toString() {
-        return "Pizza{" +
+        return getClass().getSimpleName()+"{" +
                 "size='" + size + '\'' +
                 ", numberOfCheeseTopping=" + numberOfCheeseTopping +
                 ", numberOfPepperoniTopping=" + numberOfPepperoniTopping +

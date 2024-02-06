@@ -10,5 +10,7 @@ public class PizzaClients {
         System.out.println(pizza2.toString()+"  $"+pizza2.calcCost());
         System.out.println(pizza3.toString()+"  $"+pizza3.calcCost());
 
+        System.out.println(pizza1 + " $" + pizza1.calcCost());
+
     }
 }
