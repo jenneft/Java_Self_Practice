@@ -53,7 +53,7 @@ public class Restaurant {
     }
 
     public void terminateChef(int employeeID) {
-        Chefs.removeIf(chef -> chef.getEmployeeID() == employeeID);
+        Chefs.removeIf(chef -> chef.getEmployeeID() == employeeID);//to terminate an individual employee
     }
 
 
@@ -73,7 +73,7 @@ public class Restaurant {
     }
 
     public void terminateServer(int employeeID){
-        Servers.removeIf(server -> server.getEmployeeID()==employeeID);
+        Servers.removeIf(server -> server.getEmployeeID()==employeeID);//to terminate an individual employee
     }
 
 
