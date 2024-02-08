@@ -23,7 +23,7 @@ public class StateClients {
 
 
         State state2=new State("California","CA","Democratic","Gavin Newsom"," Laphonza Butler ",39_240_000);
-        California c1=new California(state2,"Austin");
+        California c1=new California(state2,"Sacramento");
         System.out.println(state1+" "+t1);
         c1.displayNicknames();
         c1.founded();
