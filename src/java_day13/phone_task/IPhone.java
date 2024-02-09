@@ -94,7 +94,7 @@ public class IPhone {
 
     @Override
     public String toString() {
-        return "IPhone" + tracker++ + "{" +
+        return getClass().getSimpleName()+ tracker++ + "{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", size='" + size + '\'' +
