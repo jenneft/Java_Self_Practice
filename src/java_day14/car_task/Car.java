@@ -1,56 +1,57 @@
 package java_day14.car_task;
 
- public abstract class Car {
-    private final String  make;
+public abstract class Car {
+    private final String make;
     private final String model;
     private final int year;
-     private double price;
-     private String color;
+    private double price;
+    private String color;
 
-     public boolean isValidString(String str) {
-         return str != null && !str.trim().isEmpty();
-     }
+    public boolean isValidString(String str) {
+        return str != null && !str.trim().isEmpty();
+    }
 
-     public Car(String make, String model, int year, double price, String color) {
-         if(!isValidString(make))
-             throw new RuntimeException("Make Cannot Be Null or Empty");
-         if(!isValidString(model))
-             throw new RuntimeException("Model Cannot Be Null or Empty");
-         if(!isValidString(color))
-             throw new RuntimeException("Color Cannot Be Null or Empty");
-         if(year<1986)
-             throw new RuntimeException("Year Must Not Be Less Than 1886");
-         if(price<0)
-             throw new RuntimeException("Price Must Not Be Negative");
+    public Car(String make, String model, int year, double price, String color) {
+        if (!isValidString(make))
+            throw new RuntimeException("Make Cannot Be Null or Empty");
+        if (!isValidString(model))
+            throw new RuntimeException("Model Cannot Be Null or Empty");
+        if (!isValidString(color))
+            throw new RuntimeException("Color Cannot Be Null or Empty");
+        if (year < 1986)
+            throw new RuntimeException("Year Must Not Be Less Than 1886");
+        if (price < 0)
+            throw new RuntimeException("Price Must Not Be Negative");
 
-         this.make = make;
-         this.model = model;
-         this.year = year;
-         this.price = price;
-         this.color = color;
-     }
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.price = price;
+        this.color = color;
+    }
 
-     public abstract void start();
-     public abstract void drive();
+    public abstract void start();
 
-     public void stop(){
+    public abstract void drive();
 
-         System.out.println(make+" Stopped");
-     }
+    public void stop() {
 
-     @Override
-     public String toString() {
-         return "Car{" +
-                 "make='" + make + '\'' +
-                 ", model='" + model + '\'' +
-                 ", year=" + year +
-                 ", price=" + price +
-                 ", color='" + color + '\'' +
-                 '}';
-     }
+        System.out.println(make + " Stopped");
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
+                ", price=" + price +
+                ", color='" + color + '\'' +
+                '}';
+    }
 
 
- }
+}
 /*
 
 Car Task Requirements:
