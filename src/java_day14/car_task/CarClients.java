@@ -19,6 +19,35 @@ public class CarClients {
         test(mercedes);
         test(tesla);
         test(nio);
+        test(cydeoCar);
+
+        System.out.println("--------------------------------------");
+
+        audi.hasAutoPark();
+        audi.autoPark();
+        mercedes.autoPark();
+        mercedes.autoPark();
+
+        System.out.println("--------------------------------------");
+
+        tesla.autoPark();
+        tesla.selfDrive();
+        tesla.hasAutoPark();
+        tesla.hasAutoPilot();
+        nio.autoPark();
+        nio.selfDrive();
+        nio.hasAutoPark();
+        nio.hasAutoPilot();
+
+        System.out.println("--------------------------------------");
+
+        cydeoCar.autoPark();
+        cydeoCar.selfDrive();
+        cydeoCar.fly();
+        cydeoCar.hasAutoPark();
+        cydeoCar.hasAutoPilot();
+        cydeoCar.canFly();
+
 
     }
 
@@ -26,6 +55,7 @@ public class CarClients {
         System.out.println("Testing " + car.getClass().getSimpleName() + ":");
         car.start();
         car.drive();
+
 
 
         if (car instanceof AutoPark) {

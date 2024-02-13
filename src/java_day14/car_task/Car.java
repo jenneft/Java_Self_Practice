@@ -34,7 +34,8 @@ package java_day14.car_task;
      public abstract void drive();
 
      public void stop(){
-         System.out.println("Car Stopped");
+
+         System.out.println(make+" Stopped");
      }
 
      @Override
