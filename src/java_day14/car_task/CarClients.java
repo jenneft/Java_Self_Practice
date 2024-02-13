@@ -21,32 +21,7 @@ public class CarClients {
         test(nio);
         test(cydeoCar);
 
-        System.out.println("--------------------------------------");
 
-        audi.hasAutoPark();
-        audi.autoPark();
-        mercedes.autoPark();
-        mercedes.autoPark();
-
-        System.out.println("--------------------------------------");
-
-        tesla.autoPark();
-        tesla.selfDrive();
-        tesla.hasAutoPark();
-        tesla.hasAutoPilot();
-        nio.autoPark();
-        nio.selfDrive();
-        nio.hasAutoPark();
-        nio.hasAutoPilot();
-
-        System.out.println("--------------------------------------");
-
-        cydeoCar.autoPark();
-        cydeoCar.selfDrive();
-        cydeoCar.fly();
-        cydeoCar.hasAutoPark();
-        cydeoCar.hasAutoPilot();
-        cydeoCar.canFly();
 
 
     }
