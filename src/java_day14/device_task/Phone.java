@@ -6,10 +6,10 @@ public abstract class Phone extends Device {
         super(brand, model, size, price, color, hasBattery, hasPowerButton);
     }
 
-    public void call(){
+    public void call(long phoneNum){
         System.out.println("Calling: ");
     }
-    public void text(){
+    public void text(long phoneNum){
         System.out.println("Texting: ");
     }
 
