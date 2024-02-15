@@ -33,12 +33,12 @@ public class IPhone extends Phone implements Downloadable,AppleApps {
 
     @Override
     public void call(long phoneNum) {
-        System.out.println("IPhone is Calling ");
+        System.out.println("IPhone is Calling "+phoneNum);
     }
 
     @Override
     public void text(long phoneNum) {
-        System.out.println("Iphone is Texting  ");
+        System.out.println("Iphone is Texting  "+phoneNum);
     }
 }
 /*

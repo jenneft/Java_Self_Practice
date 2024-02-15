@@ -7,10 +7,10 @@ public abstract class Phone extends Device {
     }
 
     public void call(long phoneNum){
-        System.out.println("Calling: ");
+        System.out.println("Calling: "+phoneNum);
     }
     public void text(long phoneNum){
-        System.out.println("Texting: ");
+        System.out.println("Texting: "+phoneNum);
     }
 
     @Override

@@ -31,9 +31,10 @@ public class DeviceShop {
 
 
 
-        iPhone.call(23049141);
-        samsung.text(12314141);
-        samsung.call(13413414);
+        iPhone.call(230491418);
+        iPhone.text(524314145);
+        samsung.text(123141419);
+        samsung.call(134134148);
         google.text(414141414);
         google.call(1412414141);
     }

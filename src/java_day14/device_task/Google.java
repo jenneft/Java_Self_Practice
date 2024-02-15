@@ -34,12 +34,12 @@ public class Google extends Phone implements Downloadable,AndroidApps {
 
     @Override
     public void call(long phoneNum) {
-        System.out.println("Google is Calling ");
+        System.out.println("Google is Calling "+phoneNum);
     }
 
     @Override
     public void text(long phoneNum) {
-        System.out.println("Google is texting ");
+        System.out.println("Google is texting "+phoneNum);
     }
 }
 /*
