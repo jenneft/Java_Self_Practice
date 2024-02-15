@@ -30,8 +30,12 @@ public class DeviceShop {
         laptop.lockScreen();
 
 
-        iPhone.text(239123747);
-        samsung.call(144495833);
+        iPhone.text();
+        iPhone.call();
+        samsung.text();
+        samsung.call();
+        google.text();
+        google.call();
     }
 
 

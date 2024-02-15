@@ -25,7 +25,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
+        return getClass().getSimpleName()+"{" +
                 "model='" + model + '\'' +
                 ", color='" + color + '\'' +
                 ", year=" + year +

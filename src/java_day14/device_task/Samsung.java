@@ -32,12 +32,12 @@ public class Samsung extends Phone implements Downloadable,AndroidApps{
     }
 
     @Override
-    public void call(long phoneNum) {
+    public void call() {
         System.out.println("Samsung is Calling ");
     }
 
     @Override
-    public void text(long phoneNum) {
+    public void text() {
         System.out.println("Samsung is Texting");
     }
 }

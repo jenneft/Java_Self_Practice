@@ -44,6 +44,7 @@ public class CarShop {
 
         ArrayList<Tesla> teslaCars = carShop.getTeslaCars();
         System.out.println("Tesla cars: "+ teslaCars);
+
     }
 
     public Car[] cars;

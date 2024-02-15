@@ -32,12 +32,12 @@ public class IPhone extends Phone implements Downloadable,AppleApps {
     }
 
     @Override
-    public void call(long phoneNum) {
+    public void call() {
         System.out.println("IPhone is Calling ");
     }
 
     @Override
-    public void text(long phoneNum) {
+    public void text() {
         System.out.println("Iphone is Texting  ");
     }
 }
