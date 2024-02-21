@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class MaximumAndMinimumNumbers {
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(7,1, 2, 3, 4, 5));
 
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
