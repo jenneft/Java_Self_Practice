@@ -15,20 +15,14 @@ public class Samsung extends Phone implements Downloadable,AndroidApps{
         System.out.println("Device is turned off");
     }
 
-    @Override
-    public String AppStoreName() {
-        return "Galaxy App Store";
-    }
 
-    @Override
-    public String OS() {
-        return "Android";
-    }
+
+
 
 
     @Override
     public void downloadApp() {
-        System.out.println("Samsung Downloading from Galaxy App Store: ");
+        System.out.println(getBrand()+getModel()+" is Downloading from: "+ AppStoreName);
     }
 
     @Override

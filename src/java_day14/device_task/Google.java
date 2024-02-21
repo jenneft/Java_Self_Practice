@@ -15,21 +15,13 @@ public class Google extends Phone implements Downloadable,AndroidApps {
         System.out.println("Device is turned off");
     }
 
-    @Override
-    public String AppStoreName() {
-        return "Google Play Store";
-    }
 
-    @Override
-    public String OS() {
-        return "Android";
-    }
 
 
 
     @Override
     public void downloadApp() {
-        System.out.println("Google is Downloading from the Play Store");
+        System.out.println(getBrand()+getModel()+" is Downloading from:"+AppStoreName);
     }
 
     @Override

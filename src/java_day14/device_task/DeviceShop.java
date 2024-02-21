@@ -57,13 +57,13 @@ public class DeviceShop {
         }
         if (device instanceof AndroidApps) {
             AndroidApps androidDevice = (AndroidApps) device;
-            System.out.println("App Store Name: " + androidDevice.AppStoreName());
-            System.out.println("OS: " + androidDevice.OS());
+            System.out.println("App Store Name: " + androidDevice.AppStoreName);
+            System.out.println("OS: " + androidDevice.OS);
         }
         if (device instanceof AppleApps) {
             AppleApps appleDevice = (AppleApps) device;
-            System.out.println("App Store Name: " + appleDevice.AppStoreName());
-            System.out.println("OS: " + appleDevice.OS());
+            System.out.println("App Store Name: " + appleDevice.AppStoreName);
+            System.out.println("OS: " + appleDevice.OS);
         }
 
 

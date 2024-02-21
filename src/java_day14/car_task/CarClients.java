@@ -22,16 +22,12 @@ public class CarClients {
         test(cydeoCar);
 
 
-
-
     }
 
     private static void test(Car car) {
         System.out.println("Testing " + car.getClass().getSimpleName() + ":");
         car.start();
         car.drive();
-
-
 
         if (car instanceof AutoPark) {
             ((AutoPark) car).autoPark();

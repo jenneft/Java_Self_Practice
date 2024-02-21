@@ -1,9 +1,9 @@
 package java_day14.device_task;
 
 public interface AndroidApps extends Downloadable {
-    String AppStoreName();
+    String AppStoreName="Google Play";
 
-    String OS();
+    String OS="Android";
 }
 /*
 5. Create a Child Interface of Downloadable Named 'AndroidApps':

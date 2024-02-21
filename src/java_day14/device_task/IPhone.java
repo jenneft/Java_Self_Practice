@@ -15,20 +15,12 @@ public class IPhone extends Phone implements Downloadable,AppleApps {
         System.out.println("Device is turned off");
     }
 
-    @Override
-    public String AppStoreName() {
-        return "Apple App Store";
-    }
 
-    @Override
-    public String OS() {
-        return "iOS";
-    }
 
 
     @Override
     public void downloadApp() {
-        System.out.println("App is downloading from the Apple App Store");
+        System.out.println(getBrand()+getModel()+" is downloading from:"+AppStoreName);
     }
 
     @Override
